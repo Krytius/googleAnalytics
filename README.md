@@ -9,7 +9,11 @@ updated by Elvis Ferreira Coelho
 Using this plugin requires [iOS Cordova](http://github.com/phonegap/phonegap-iphone) and the Google Analytics for Mobile Apps SDK (included). The Google Analytics for Mobile
 
 1. Make sure you are running Cordova(PhoneGap) 3.0
-2. Drag and drop the `GoogleAnalytics` folder from Finder to your Plugins folder in XCode, using "Create groups for any added folders"
+2. Install using the command:
+
+```bash
+phonegap local plugin add https://github.com/Krytius/googleAnalytics.git
+```
 
 ## JAVASCRIPT INTERFACE ##
 
