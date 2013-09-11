@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="googleAnalytics"
+        version="0.0.1">
+    <name>Analytics</name>
+    <description>Google Analytics Plugin</description>
+    <license>Phonegap 3.0</license>
+    <keywords>analytics,google</keywords>
+    
+    <js-module src="www/GoogleAnalyticsPlugin.js" name="GoogleAnalyticsPlugin">
+        <clobbers target="window.googleAnalyticsPlugin" />
+    </js-module>
+
+    
+    <!-- ios -->
+    <platform name="ios">
+        <header-file src="src/ios/GoogleAnalyticsPlugin.h" />
+        <source-file src="src/ios/GoogleAnalyticsPlugin.m" />
+        
+        <config-file target="config.xml" parent="/*">
+            <feature name="GoogleAnalyticsPlugin">
+                <param name="ios-package" value="GoogleAnalyticsPlugin"/>
+            </feature>
+        </config-file>
+
+        <!-- framework -->
+        <source-file src="src/ios/frameworks/libGoogleAnalytics.a" target-dir="GoogleAnalyticsSDK" framework="true" />
+
+        <!-- header files -->
+        <header-file src="src/ios/headers/GANTracker.h" target-dir="GoogleAnalyticsSDK" />
+        
+        <!-- frameworks -->
+        <framework src="libsqlite3.0.dylib" />
+        <framework src="libsqlite3.dylib" />
+        <framework src="libz.dylib" />
+        <framework src="AdSupport.framework" />
+        <framework src="CoreData.framework" />
+        <framework src="CFNetwork.framework" />
+        <fremework src="SystemConfiguration.framework" />
+    </platform>
+</plugin>
