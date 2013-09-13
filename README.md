@@ -28,6 +28,11 @@ phonegap local plugin add https://github.com/Krytius/googleAnalytics.git
     // Track an pageview in your application (must start with a slash)
     googleAnalytics.trackPageview("/test");
 
+## IOS XCODE ##
+
+In your Build Settings remove armv7s from Valid Architectures.
+
+
 ## BUGS AND CONTRIBUTIONS ##
 
 Patches welcome! Send a pull request. Since this is not a part of Cordova Core (which requires a CLA), this should be easier.

@@ -15,28 +15,20 @@
     
     <!-- ios -->
     <platform name="ios">
-        <header-file src="src/ios/GoogleAnalyticsPlugin.h" />
-        <source-file src="src/ios/GoogleAnalyticsPlugin.m" />
-        
         <config-file target="config.xml" parent="/*">
             <feature name="GoogleAnalyticsPlugin">
                 <param name="ios-package" value="GoogleAnalyticsPlugin"/>
             </feature>
         </config-file>
 
-        <!-- framework -->
-        <source-file src="src/ios/frameworks/libGoogleAnalytics.a" target-dir="GoogleAnalyticsSDK" framework="true" />
+        <header-file src="src/ios/GoogleAnalyticsPlugin.h" />
+        <source-file src="src/ios/GoogleAnalyticsPlugin.m" />
 
-        <!-- header files -->
-        <header-file src="src/ios/headers/GANTracker.h" target-dir="GoogleAnalyticsSDK" />
+        <!-- source files -->
+        <source-file src="src/ios/frameworks/libGoogleAnalytics.a" framework="true" />
+        <source-file src="src/ios/headers/GANTracker.h"/>
         
         <!-- frameworks -->
         <framework src="libsqlite3.0.dylib" />
-        <framework src="libsqlite3.dylib" />
-        <framework src="libz.dylib" />
-        <framework src="AdSupport.framework" />
-        <framework src="CoreData.framework" />
-        <framework src="CFNetwork.framework" />
-        <fremework src="SystemConfiguration.framework" />
     </platform>
 </plugin>
